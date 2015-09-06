@@ -24,7 +24,7 @@
   </node>
   
   <node pkg="kobuki_keyop" type="keyop" name="keyop" output="screen">
-    <remap from="keyop/motor_power" to="mobile_base/commands/motor_power"/>
+    <remap from="keyop/motor_power" to="/ninja_pandavs/teleop/motor_power"/>
     <remap from="keyop/cmd_vel" to="keyop_vel_smoother/raw_cmd_vel"/>
     <param name="linear_vel_step"  value="0.05" type="double"/>
     <param name="linear_vel_max"   value="1.5"  type="double"/>
