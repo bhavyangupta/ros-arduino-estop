@@ -11,7 +11,7 @@ static  int estop_switch_status = 0; // 0- estop disengaged (motors running)  1-
 ros::NodeHandle nh;
 kobuki_msgs::MotorPower sent_cmd;
 kobuki_msgs::MotorPower user_cmd;
-ros::Publisher publish_emergency_cmd("/mobile_base/commands/motor_power",&motor_cmd);
+ros::Publisher publish_emergency_cmd("/mobile_base/commands/motor_power",&sent_cmd);
 
 void callback_keyop(const kobuki_msgs::MotorPower &teleop_msg){
   user_cmd.state = teleop_msg.state;
