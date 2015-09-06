@@ -35,6 +35,7 @@ void loop(){
       sent_cmd.state = kobuki_msgs::MotorPower::OFF;
   }
   else {
+      //sent_cmd.state = kobuki_msgs::MotorPower::ON;
       sent_cmd.state = user_cmd.state;
   }
   
